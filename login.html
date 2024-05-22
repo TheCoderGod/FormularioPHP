@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login exemplo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <form name="form1" method="post" action="verifica.php" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Preencha os campos abaixo:</legend>
+                <label for="login">Login:</label>
+                <input name='login' type="text" id="login">
+                <label for="senha">Digite sua senha:</label>
+                <input name="senha" type="password" id="senha">
+            </fieldset>
+            <input class="btn" type="Submit" name="Submit" value="Continuar">
+        </form>
+
+        <script>
+            function validateForm() {
+                var login = document.getElementById("login").value;
+                var senha = document.getElementById("senha").value;
+
+                if (login == "") {
+                    alert("Por favor, preencha o campo de login.");
+                    return false;
+                }
+
+                if (senha == "") {
+                    alert("Por favor, preencha o campo de senha.");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
